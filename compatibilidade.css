@@ -1,0 +1,203 @@
+.compat-stage {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 84% 37%, #3720365f, transparent 60%),
+    radial-gradient(ellipse at 9% 100%, #54291654, transparent 48%),
+    linear-gradient(156deg, #0c0810, #08070d 51%, #050405);
+  border-block-end: 1px solid #78648356;
+}
+
+.compat-chamber {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  grid-template-areas: "intro console" "sample console";
+  align-items: start;
+  gap: clamp(1.35rem, 3vw, 3.25rem) clamp(1.5rem, 5vw, 6rem);
+  padding-block: clamp(2.7rem, 6.2vw, 6.5rem);
+}
+
+.compat-head { grid-area: intro; min-width: 0; }
+.compat-head .eyebrow { margin-block-end: .65rem; }
+.compat-head h1 {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 .16em;
+  font-size: clamp(2.45rem, 5.65vw, 6.25rem);
+  line-height: 1.035;
+  letter-spacing: -.061em;
+  word-spacing: .025em;
+  text-wrap: balance;
+}
+.compat-head .lead { max-width: 27rem; }
+
+.compat-scene {
+  grid-area: sample;
+  position: relative;
+  width: min(100%, 33rem);
+  margin: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+.compat-scene img { display: block; width: 100%; height: auto; }
+.compat-scene::before,
+.compat-scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.compat-scene::before {
+  z-index: 1;
+  background: radial-gradient(ellipse at 55% 48%, transparent 56%, #0302047d 83%, #030204 100%);
+}
+.compat-scene::after {
+  background: radial-gradient(ellipse at 66% 75%, #ff7b2644, transparent 27%);
+  mix-blend-mode: screen;
+  opacity: .45;
+  animation: compat-glow 11s ease-in-out infinite alternate;
+}
+@keyframes compat-glow {
+  from { opacity: .26; }
+  to { opacity: .59; }
+}
+
+.compat-interface { grid-area: console; min-width: 0; }
+.compat-dock {
+  position: relative;
+  container-type: inline-size;
+  min-width: 0;
+  padding: clamp(1.12rem, 3vw, 3rem);
+  border: 1px solid transparent;
+  background:
+    radial-gradient(ellipse at 6% 0%, #ad79ce23, transparent 51%) padding-box,
+    radial-gradient(ellipse at 100% 99%, #cc63251e, transparent 40%) padding-box,
+    linear-gradient(150deg, #201827, #0b0b12 47%, #140c13) padding-box,
+    linear-gradient(149deg, #c6abda9b, #42374c 40%, #17131e 72%, #8f5335b8) border-box;
+  box-shadow: inset 0 1px #ffffff1a, 0 1.75rem 4rem #0008;
+}
+.compat-dock::before {
+  content: "";
+  position: absolute;
+  inset: -1px clamp(.7rem, 2vw, 2rem) auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #dfc5f3aa 27%, transparent 74%);
+}
+.compat-dock h2 { margin: 0; font-size: clamp(1.3rem, 2.35vw, 2.05rem); line-height: 1.13; letter-spacing: -.043em; }
+.compat-dock > p {
+  max-width: 45ch;
+  margin: .55rem 0 1.2rem;
+  color: var(--muted, #aaaaba);
+  font-size: .91rem;
+  line-height: 1.55;
+}
+
+
+.compat-field {
+  display: grid;
+  grid-template-columns: minmax(6rem, .78fr) minmax(0, 1.22fr);
+  align-items: center;
+  gap: .8rem;
+  padding-block: .62rem;
+  border-top: 1px solid #eeebff20;
+}
+.compat-field label { font-size: .86rem; font-weight: 650; }
+.compat-field select {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 2.7rem;
+  padding: .4rem .55rem;
+  border: 1px solid #f0e8ff30;
+  border-radius: 0;
+  background: linear-gradient(165deg, #25212c, #111018 72%);
+  color: var(--metal, #d8dbe5);
+  color-scheme: dark;
+  font: inherit;
+  font-size: .85rem;
+}
+.compat-field select:hover { border-color: #f1c3ab82; }
+.compat-field select:focus-visible { outline: 1px solid #ffd6b4; outline-offset: 2px; }
+.compat-field option { background: #15131b; color: #f4eff8; }
+.compat-field option:disabled { color: #b2aab8; }
+.compat-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .8rem 1rem;
+  margin-block-start: .6rem;
+}
+.compat-actions small { color: var(--muted, #aaaaba); font-size: .75rem; }
+.compat-actions button:disabled { opacity: .55; cursor: default; }
+.compat-result {
+  --compat-status: #bfa1ec;
+  margin-block-start: 1.25rem;
+  padding: .65rem .8rem;
+  border-inline-start: 2px solid var(--compat-status);
+  background: #b896f10b;
+}
+.compat-result[data-state="pending"] { --compat-status: #fcb580; background: #ff9b5410; }
+.compat-result[data-state="outside"] { --compat-status: #d5a0a8; background: #e6a8b112; }
+.compat-result h3 { margin: 0; font-size: .92rem; line-height: 1.4; }
+.compat-result p { margin: .3rem 0 0; color: var(--muted, #aaaaba); font-size: .83rem; line-height: 1.5; }
+.compat-dock noscript { color: var(--muted, #aaaaba); }
+
+.compat-next {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem 2rem;
+  padding-block: clamp(1.8rem, 4vw, 3.2rem);
+  border-top: 1px solid var(--seam, #ffffff26);
+}
+.compat-next h2 { margin: 0; font-size: clamp(1.2rem, 2.2vw, 1.7rem); letter-spacing: -.045em; }
+.compat-next p { margin: .4rem 0 0; color: var(--muted, #aaaaba); }
+
+@media (max-width: 900px) {
+  .compat-chamber {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "intro" "console" "sample";
+    padding-block: 2.2rem 2.9rem;
+  }
+  .compat-head h1 { font-size: clamp(2.45rem, 8.5vw, 4.95rem); }
+  .compat-scene { width: min(100%, 36rem); margin-inline: auto; }
+}
+@container (max-width: 400px) {
+  .compat-field { grid-template-columns: minmax(0, 1fr); gap: .35rem; }
+  .compat-field select { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .compat-scene::after { animation: none; }
+}
+
+/* O brilho percorre a borda da interface e deixa os campos livres. */
+@property --compat-light-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: -5deg;
+}
+.compat-dock::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  padding: 2px;
+  background: conic-gradient(from var(--compat-light-angle, -5deg),
+    transparent 0deg 311deg, #b478f029 326deg, #d39df3 341deg,
+    #fff0d5 351deg, #ffae72 354deg, transparent 360deg);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) and (forced-colors: none) {
+  .compat-stage.is-in-view .compat-dock::after {
+    opacity: .9;
+    animation: compat-dock-edge 6.7s linear infinite;
+  }
+  .filament-motion-paused .compat-stage.is-in-view .compat-dock::after { animation-play-state: paused; }
+}
+@keyframes compat-dock-edge {
+  from { --compat-light-angle: -5deg; }
+  to { --compat-light-angle: 355deg; }
+}
+

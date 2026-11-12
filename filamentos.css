@@ -1,0 +1,45 @@
+.filament-canvas {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+.filament-canvas[hidden], .filament-canvas:not([data-ready]) { display: none; }
+
+.filament-toggle {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 40px;
+  min-height: 43px;
+  padding: 0;
+  border: 0;
+  color: #e3d8f0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.filament-toggle[hidden] { display: none; }
+.filament-toggle:hover { color: #fff0e4; }
+.filament-toggle::before {
+  content: "";
+  width: 10px;
+  height: 12px;
+  border-inline: 2px solid currentColor;
+}
+
+.filament-toggle[aria-pressed="true"]::before {
+  border: 0;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.filament-motion-paused .magnet-art::after,
+.filament-motion-paused .core-image::before,
+.filament-motion-paused #rota-direta:checked ~ .route-deck .route-orbit--direct::after,
+.filament-motion-paused .compat-scene::after {
+  animation-play-state: paused;
+}
+
+@media (max-width: 445px) {
+  .filament-toggle { width: 36px; min-height: 38px; }
+}

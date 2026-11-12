@@ -1,0 +1,293 @@
+.method-hero {
+  position: relative;
+  display: grid;
+  isolation: isolate;
+  justify-items: center;
+  background:
+    radial-gradient(ellipse at 73% 61%, #150d1c, transparent 61%),
+    radial-gradient(ellipse at 15% 81%, #3b241a52, transparent 42%),
+    #030204;
+  border-block-end: 1px solid #8d789347;
+}
+
+.method-hero > .v20-ambient::before {
+  inset: -8% -10% -10% 10%;
+  background:
+    radial-gradient(ellipse at 63% 53%, #985acf32, transparent 49%),
+    radial-gradient(ellipse at 66% 77%, #df73321e, transparent 44%);
+  mask-image: radial-gradient(ellipse at 59% 55%, #000 18%, transparent 72%);
+}
+
+.method-hero-shell {
+  position: relative;
+  z-index: 1;
+  padding-block-start: clamp(2.1rem, 4.6vw, 4.3rem);
+}
+
+.method-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.24fr) minmax(0, .76fr);
+  align-items: end;
+  gap: 0 clamp(1.4rem, 5.5vw, 6.2rem);
+}
+
+.method-intro .eyebrow { grid-column: 1 / -1; margin-block-end: .67rem; }
+
+.method-intro h1 {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: .045em .085em .14em 0;
+  font-size: clamp(2.35rem, 5.05vw, 5.1rem);
+  font-weight: 770;
+  letter-spacing: -.061em;
+  word-spacing: .035em;
+  line-height: 1.035;
+}
+
+.method-title-line { display: block; text-wrap: pretty; }
+.method-intro-detail { padding-block-end: .4rem; }
+.method-intro .lead { max-width: 38ch; margin: 0 0 1.05rem; }
+
+.method-art {
+  position: relative;
+  width: min(89%, 68rem, max(27rem, calc((100svh - 23.25rem) * 1.7768)));
+  margin: clamp(.4rem, 1vw, .95rem) auto clamp(.35rem, 1.2vw, 1.2rem);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+.method-art img { display: block; width: 100%; height: auto; }
+.method-art .method-filament-canvas { mix-blend-mode: screen; }
+.method-rail-canvas {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+.method-rail-canvas[hidden] { display: none; }
+
+
+.method-lab { padding-block: clamp(60px, 7vw, 110px); scroll-margin-block-start: 1rem; }
+.method-section-header { display: flex; align-items: end; justify-content: space-between; gap: 1.4rem 3rem; margin-bottom: 2.3rem; }
+.method-section-header h2, .method-criteria h2 {
+  margin: 0;
+  padding-block-end: .16em;
+  font-size: clamp(2.6rem, 5.1vw, 5.2rem);
+  font-weight: 760;
+  line-height: 1.04;
+  letter-spacing: -.055em;
+  word-spacing: .02em;
+}
+.method-section-header p { max-width: 35ch; color: var(--muted); }
+.route-lab { min-width: 0; margin: 0; padding: 0; border: 0; }
+.method-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.route-switch { display: flex; gap: .25rem; border-bottom: 1px solid var(--seam); }
+.route-switch label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  min-height: 46px;
+  padding: .45rem .85rem;
+  color: var(--muted);
+  font-size: .83rem;
+  font-weight: 740;
+  cursor: pointer;
+}
+.route-switch label::before {
+  content: "";
+  width: .42rem;
+  height: .42rem;
+  background: currentColor;
+  transform: rotate(45deg);
+}
+#rota-direta:checked ~ .route-switch label[for="rota-direta"] { color: #ffd0af; box-shadow: inset 0 -2px var(--ember); }
+#rota-alternativa:checked ~ .route-switch label[for="rota-alternativa"] { color: #ddd0ff; box-shadow: inset 0 -2px var(--violet); }
+#rota-direta:focus-visible ~ .route-switch label[for="rota-direta"],
+#rota-alternativa:focus-visible ~ .route-switch label[for="rota-alternativa"] { outline: 2px solid currentColor; outline-offset: -3px; }
+.route-deck {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  min-height: 245px;
+  border-bottom: 1px solid var(--seam);
+  background: linear-gradient(115deg, #08090e, #0d0a12);
+}
+.route-figure {
+  position: relative;
+  min-height: 218px;
+  overflow: hidden;
+  background: repeating-linear-gradient(117deg, transparent 0 19px, #9e9ab109 20px 21px);
+}
+.route-orbit {
+  position: absolute;
+  inset-inline: 13%;
+  color: #756a80;
+}
+.route-orbit--direct {
+  top: 66%;
+  height: 2px;
+  background: currentColor;
+}
+.route-orbit--alternate {
+  top: 29%;
+  bottom: 34%;
+  border: 2px solid currentColor;
+  border-bottom: 0;
+  border-radius: 55% 50% 0 0 / 108% 106% 0 0;
+}
+#rota-direta:checked ~ .route-deck .route-orbit--direct { color: var(--ember); box-shadow: 0 0 13px #ff742366; }
+#rota-alternativa:checked ~ .route-deck .route-orbit--alternate { color: var(--violet); filter: drop-shadow(0 0 5px #b28cff80); }
+#rota-direta:checked ~ .route-deck .route-orbit--direct::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(19%, 45px);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffddbc);
+  box-shadow: 0 0 7px #ffb57a;
+  animation: method-pulse 7s ease-in-out infinite;
+}
+@keyframes method-pulse {
+  0%, 12% { left: 0; opacity: 0; }
+  28% { opacity: .85; }
+  76% { left: 82%; opacity: .74; }
+  90%, 100% { left: 82%; opacity: 0; }
+}
+.route-node {
+  position: absolute;
+  top: calc(66% - 4px);
+  width: 10px;
+  height: 10px;
+  transform: translateX(-50%) rotate(45deg);
+  border: 1px solid #c9c1d4;
+  background: #201727;
+}
+.route-node--origin, .route-caption--origin { left: 13%; }
+.route-node--end, .route-caption--end { left: 87%; }
+.route-caption {
+  position: absolute;
+  top: calc(66% + 18px);
+  transform: translateX(-50%);
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 730;
+  white-space: nowrap;
+}
+.route-copy {
+  display: grid;
+  align-content: center;
+  padding: clamp(24px, 4vw, 60px);
+  border-inline-start: 1px solid var(--seam);
+}
+.route-note { display: none; }
+#rota-direta:checked ~ .route-deck .route-note--direct,
+#rota-alternativa:checked ~ .route-deck .route-note--alternate { display: block; }
+.route-note h3 { margin: .55rem 0; color: var(--metal); font-size: clamp(1.2rem, 2.2vw, 1.8rem); line-height: 1.12; letter-spacing: -.045em; }
+.route-note p:last-child { max-width: 37ch; color: var(--muted); }
+
+.method-criteria { background: radial-gradient(ellipse at 85% 110%, #241533, transparent 62%), #08080d; border-top: 1px solid var(--seam); }
+.method-criteria-inner { padding-block: clamp(56px, 7vw, 100px); }
+.method-steps { margin: 2.35rem 0 2.2rem; padding: 0; list-style: none; counter-reset: method-step; }
+.method-steps li {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: .55rem 1rem;
+  padding: 1.25rem 0 1.25rem 3.15rem;
+  border-top: 1px solid var(--seam);
+  counter-increment: method-step;
+}
+.method-steps li:last-child { border-bottom: 1px solid var(--seam); }
+.method-steps li::before {
+  content: counter(method-step, decimal-leading-zero);
+  position: absolute;
+  inset: 1.4rem auto auto 0;
+  color: #d79f8a;
+  font-size: .75rem;
+  font-weight: 780;
+  letter-spacing: .09em;
+}
+.method-steps h3 { margin: 0; font-size: clamp(1.05rem, 1.7vw, 1.35rem); line-height: 1.28; }
+.method-steps p { margin: 0; color: var(--muted); }
+
+@media (max-width: 880px) {
+  .method-intro { grid-template-columns: minmax(0, 1fr); }
+  .method-intro h1 { font-size: clamp(2rem, 7.8vw, 4.25rem); }
+  .method-intro-detail { margin-block-start: .35rem; }
+  .method-intro .eyebrow { margin-block-end: .52rem; }
+  .method-intro .lead { margin-block-end: .95rem; }
+  .method-art { width: min(100%, 42rem); margin-block: .35rem .75rem; }
+  .method-section-header { flex-direction: column; align-items: start; margin-bottom: 1.65rem; }
+}
+@media (max-width: 590px) {
+  .route-deck { grid-template-columns: minmax(0, 1fr); }
+  .route-figure { min-height: 154px; }
+  .route-copy { min-height: 190px; border-inline-start: 0; border-top: 1px solid var(--seam); }
+  .method-steps li { grid-template-columns: minmax(0, 1fr); padding-inline-start: 2.35rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #rota-direta:checked ~ .route-deck .route-orbit--direct::after { animation: none; opacity: 0; }
+}
+
+/* O comparador usa a luz para marcar apenas o percurso em destaque. */
+.route-switch {
+  gap: 0;
+  border-block-start: 1px solid #ab94be52;
+  background: linear-gradient(173deg, #302536, #17121c 44%, #0d0a11);
+}
+.route-switch label {
+  min-width: 0;
+  min-height: 47px;
+  padding-inline: clamp(.6rem, 2vw, 1.25rem);
+  border-inline-end: 1px solid #9d88ad32;
+}
+.route-switch label:hover { background: #d4b5ed13; }
+.route-deck {
+  border-inline: 1px solid #90819936;
+  border-block-end-color: #90819956;
+  background: linear-gradient(132deg, #17111e 1%, #090810 56%, #141016);
+  box-shadow: inset 0 -1px #a4766842, 0 1rem 2.9rem #0005;
+}
+.route-figure {
+  background:
+    radial-gradient(ellipse at 50% 73%, #9d552d22, transparent 54%),
+    linear-gradient(90deg, #bbb0ce11 1px, transparent 1px) 0 0 / 2rem 2rem,
+    linear-gradient(0deg, #bbb0ce11 1px, transparent 1px) 0 0 / 2rem 2rem,
+    #0e0c16;
+}
+#rota-alternativa:checked ~ .route-deck .route-figure {
+  background:
+    radial-gradient(ellipse at 51% 33%, #a974f027, transparent 57%),
+    linear-gradient(90deg, #bbb0ce11 1px, transparent 1px) 0 0 / 2rem 2rem,
+    linear-gradient(0deg, #bbb0ce11 1px, transparent 1px) 0 0 / 2rem 2rem,
+    #0e0c16;
+}
+.route-node { border-color: #d1bbde; box-shadow: 0 0 .9rem #8c73b16b; }
+.route-copy {
+  background:
+    radial-gradient(ellipse at 100% 100%, #56312330, transparent 70%),
+    linear-gradient(149deg, #20182b6e, transparent 55%);
+}
+.method-criteria::before { display: none; }
+.method-criteria {
+  background:
+    radial-gradient(ellipse at 15% 110%, #301f37, transparent 59%),
+    radial-gradient(ellipse at 95% 15%, #5730243a, transparent 57%),
+    #0a080e;
+}
+@media (forced-colors: active) {
+  .route-node { border-color: CanvasText; }
+  .route-orbit--direct { background: CanvasText; }
+  .route-orbit--alternate { border-color: CanvasText; }
+}

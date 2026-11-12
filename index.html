@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Smooth. Engenharia de rotas para jogos no Windows.">
+  <title>Smooth · Engenharia de rotas</title>
+  <link rel="icon" href="assets/marca.webp" type="image/webp">
+  <link rel="stylesheet" href="magnet.css">
+  <link rel="stylesheet" href="ecossistema.css">
+  <link rel="stylesheet" href="inicio.css">
+  <link rel="stylesheet" href="filamentos.css">
+  <link rel="stylesheet" href="campo.css">
+  <script src="filamentos.js" defer></script>
+  <script src="campo.js" defer></script>
+  <script src="ecossistema.js" defer></script>
+</head>
+<body class="magnet-home magnet-ecosystem" data-zone="home">
+  <a class="skip-link" href="#principal">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="shell site-header-inner">
+      <a class="brand" href="index.html"><img src="assets/marca.webp" width="48" height="36" alt=""><span>SMOOTH</span></a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="nucleo.html">Núcleo</a>
+        <a href="produto/index.html">Produto</a>
+        <a href="metodo/index.html">Método</a>
+        <a href="compatibilidade/index.html">Compatibilidade</a>
+        <a href="acesso/index.html">Acesso</a>
+      </nav>
+    </div>
+  </header>
+  <main id="principal" tabindex="-1">
+    <section class="magnet-hero" aria-labelledby="titulo">
+      <div class="shell magnet-intro">
+        <p class="eyebrow">Engenharia de rotas para jogos</p>
+        <h1 class="metal-type" id="titulo">A rota é parte<br> do jogo.</h1>
+      </div>
+      <figure class="magnet-art">
+        <img data-filaments="inicio" src="assets/emblema-1671.webp" srcset="assets/emblema-900.webp 900w, assets/emblema-1671.webp 1671w"
+             sizes="(min-width: 1600px) 1600px, 100vw" width="1671" height="941" fetchpriority="high"
+             alt="Emblema Smooth em duas peças de titânio. Filamentos violeta acompanham o S e a luz Brasa sai de uma fresta.">
+      </figure>
+      <canvas class="magnet-field" aria-hidden="true"></canvas>
+      <div class="shell magnet-action">
+        <p class="lead">O Smooth compara a rota atual com alternativas e só troca quando a medição justifica.</p>
+        <div class="magnet-actions">
+          <a class="button" href="compatibilidade/index.html">Ver compatibilidade <span aria-hidden="true">↗</span></a>
+          <a class="button button--secondary" href="metodo/index.html">Conhecer o método</a>
+        </div>
+      </div>
+    </section>
+    <section class="magnet-relay" aria-labelledby="explorar">
+      <div class="shell magnet-relay-inner">
+        <h2 class="metal-type" id="explorar">Explore o Smooth.</h2>
+        <nav class="magnet-chapters" aria-label="Conheça o Smooth">
+          <a href="nucleo.html"><strong>Núcleo</strong><span>Titânio, filamentos e luz Brasa.</span><b aria-hidden="true">↗</b></a>
+          <a href="metodo/index.html"><strong>Método</strong><span>O que justifica mudar uma rota.</span><b aria-hidden="true">↗</b></a>
+          <a href="compatibilidade/index.html"><strong>Compatibilidade</strong><span>Veja os requisitos e consulte sua configuração.</span><b aria-hidden="true">↗</b></a>
+        </nav>
+      </div>
+    </section>
+    <section class="eco-section home-signal" aria-labelledby="sinais">
+      <div class="shell home-signal-inner">
+        <div class="home-signal-copy">
+          <p class="eyebrow">Diagnóstico da rede</p>
+          <h2 class="metal-type" id="sinais">O ping médio<br>esconde picos.</h2>
+          <p class="lead">Uma sessão estável depende da regularidade da conexão. O Smooth mede a rede separadamente do atraso de renderização e de entrada.</p>
+          <a class="button button--secondary" href="metodo/index.html">Como o Smooth mede</a>
+        </div>
+        <fieldset class="signal-console eco-panel" data-specular>
+          <legend class="signal-caption">Explore o sinal</legend>
+          <input class="signal-choice" type="radio" id="sinal-rtt" name="sinal" aria-describedby="sinal-rtt-texto" checked>
+          <input class="signal-choice" type="radio" id="sinal-jitter" name="sinal" aria-describedby="sinal-jitter-texto">
+          <input class="signal-choice" type="radio" id="sinal-perda" name="sinal" aria-describedby="sinal-perda-texto">
+          <div class="signal-controls">
+            <label for="sinal-rtt">RTT</label>
+            <label for="sinal-jitter">Jitter</label>
+            <label for="sinal-perda">Perda</label>
+          </div>
+          <div class="signal-screen" aria-hidden="true">
+            <div class="signal-graph signal-graph--rtt"></div>
+            <div class="signal-graph signal-graph--jitter"></div>
+            <div class="signal-graph signal-graph--perda"></div>
+          </div>
+          <div class="signal-description">
+            <p id="sinal-rtt-texto">Tempo de ida e volta. O pico mostra um atraso que a média pode esconder.</p>
+            <p id="sinal-jitter-texto">Variação no atraso entre pacotes. A irregularidade pode afetar a estabilidade da partida.</p>
+            <p id="sinal-perda-texto">Pacotes que deixam de chegar. As lacunas mostram onde a entrega foi interrompida.</p>
+          </div>
+          <p class="signal-disclaimer">Curvas ilustrativas</p>
+        </fieldset>
+      </div>
+    </section>
+    <section class="eco-section home-method" aria-labelledby="como">
+      <div class="shell home-method-inner">
+        <div class="home-method-art">
+          <img src="assets/metodo.webp" width="1672" height="941" loading="lazy" decoding="async" alt="">
+        </div>
+        <div class="home-method-copy">
+          <h2 class="metal-type" id="como">Medir antes<br>de intervir.</h2>
+          <ol class="home-method-flow">
+            <li><h3>Comparar</h3><p>A rota atual é a referência para testar alternativas em condições equivalentes.</p></li>
+            <li><h3>Decidir</h3><p>O Smooth considera uma troca quando há ganho verificável dentro dos limites de estabilidade.</p></li>
+            <li><h3>Explicar</h3><p>O resultado mostra o que foi medido e por que a rota foi mantida, trocada ou declarada inconclusiva.</p></li>
+          </ol>
+          <div class="eco-actions">
+            <a class="button" href="produto/index.html">Ver como o Smooth opera</a>
+            <a class="button button--secondary" href="metodo/relatorios/index.html">Ver modelo de relatório</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="eco-section home-coverage" aria-labelledby="cobertura">
+      <div class="shell home-coverage-inner">
+        <div>
+          <p class="eyebrow">Cobertura</p>
+          <h2 class="metal-type" id="cobertura">Cada combinação exige teste.</h2>
+          <p class="lead">A cobertura depende do jogo, da região e da versão do Windows. A matriz comercial está em validação.</p>
+          <a class="button" href="compatibilidade/index.html">Verificar configuração</a>
+        </div>
+        <div class="eco-panel home-access" data-specular>
+          <p class="eco-status">Oferta fechada</p>
+          <h3>Acesso por coorte</h3>
+          <p>A abertura depende de benefício demonstrado, cobertura homologada e capacidade de atendimento.</p>
+          <a class="button button--secondary" href="acesso/index.html">Consultar estado do acesso</a>
+        </div>
+      </div>
+    </section>
+    <section class="eco-section home-questions" aria-labelledby="perguntas">
+      <div class="shell home-questions-inner">
+        <div>
+          <h2 class="metal-type" id="perguntas">Antes de decidir.</h2>
+          <a class="button button--secondary" href="suporte/faq/index.html">Ver todas as perguntas</a>
+        </div>
+        <div class="home-answers">
+          <details><summary>Quando a rota atual permanece?</summary><p>Em empate, ausência de ganho relevante ou quando os dados são insuficientes para justificar uma troca.</p></details>
+          <details><summary>Compatibilidade garante menor ping?</summary><p>A compatibilidade identifica um ambiente coberto. O ganho depende da rota, do servidor e das condições da sessão.</p></details>
+          <details><summary>Quando será possível comprar?</summary><p>A oferta abre após a validação da cobertura, das evidências e das condições comerciais.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="home-loop" aria-labelledby="retomar">
+      <div class="shell">
+        <h2 class="metal-type" id="retomar">Comece pela sua configuração.</h2>
+        <a class="button" href="compatibilidade/index.html">Ver compatibilidade <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="shell eco-footer-inner">
+      <a class="brand" href="index.html"><img src="assets/marca.webp" width="48" height="36" alt=""><span>SMOOTH</span></a>
+      <nav class="eco-footer-nav" aria-label="Rodapé">
+        <a href="suporte/index.html">Suporte</a>
+        <a href="status/index.html">Status</a>
+        <a href="termos/index.html">Termos</a>
+        <a href="privacidade/index.html">Privacidade</a>
+        <a href="cancelamento/index.html">Cancelamento</a>
+      </nav>
+      <small class="eco-version">Modelo 2.0 · Magnetita</small>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,320 @@
+
+/* Acesso: titânio escovado, vidro Magnetita e guias de luz. */
+.commerce[data-zone="access"] {
+  --access-void: #09070b;
+  --access-titanium: #d5dde7;
+  --access-violet: #b79adf;
+  --access-ember: #ffb077;
+  --access-chamfer: 15px;
+}
+
+.commerce--acesso .commerce-hero {
+  background:
+    radial-gradient(ellipse at 84% 35%, #2f1c3a5e, transparent 54%),
+    radial-gradient(ellipse at 73% 104%, #48201465, transparent 56%),
+    var(--access-void);
+}
+
+.commerce--acesso .commerce-hero-inner {
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(20px, 4vw, 76px);
+  min-height: clamp(510px, 44vw, 650px);
+}
+
+.commerce--acesso .commerce-copy {
+  z-index: 1;
+}
+
+.commerce--acesso .commerce-copy h1 {
+  font-size: clamp(2.65rem, 5.95vw, 6.3rem);
+}
+
+.access-assembly {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  margin-block: -14px 0;
+  mix-blend-mode: screen;
+}
+
+.access-assembly img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  mask-image:
+    linear-gradient(90deg, transparent, #000 11% 92%, transparent),
+    linear-gradient(0deg, transparent, #000 11% 92%, transparent);
+  mask-composite: intersect;
+}
+
+.access-assembly-track {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.access-assembly-track::after {
+  content: "";
+  position: absolute;
+  width: clamp(26px, 6vw, 106px);
+  height: clamp(2px, .3vw, 5px);
+  offset-path: shape(
+    from 28.3% 75.6%,
+    curve to 75.6% 37% with 44% 64.5% / 65% 48.5%,
+    curve to 85% 24.6% with 79.4% 33% / 82.7% 28%
+  );
+  offset-rotate: auto;
+  background: linear-gradient(90deg, transparent, #f9802b 25%, #ffe2aa 67%, #fffaf1 85%, transparent);
+  filter: drop-shadow(0 0 5px #ff9533) drop-shadow(0 0 13px #ff6814);
+  mix-blend-mode: screen;
+  opacity: 0;
+}
+
+.commerce--acesso .commerce-grid {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, .8fr);
+}
+
+.access-options {
+  min-width: 0;
+  padding: clamp(17px, 3vw, 38px);
+  border-block: 1px solid transparent;
+  border-image: linear-gradient(92deg, #9e85c97d, #614d678a 60%, #bf80594d) 1;
+  background:
+    linear-gradient(122deg, #74618526, transparent 40%),
+    radial-gradient(ellipse at 100% 100%, #49221145, transparent 55%),
+    linear-gradient(115deg, #17121d, #0b080e);
+}
+
+.commerce .access-options h2 {
+  font-size: clamp(1.32rem, 2.3vw, 2rem);
+  text-wrap: balance;
+  margin-block-end: .7em;
+}
+
+.access-option {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 11px;
+  column-gap: 14px;
+  min-width: 0;
+  padding-block: .85rem;
+  border-block-start: 1px solid #b49dce42;
+  text-decoration: none;
+  transition: color 100ms ease-out, transform 100ms ease-out;
+}
+
+.access-option strong { color: #f4eefb; }
+.access-option span { color: #c6bace; font-size: .86rem; }
+.access-option i {
+  grid-area: 1 / 2 / span 2;
+  align-self: center;
+  width: 8px;
+  height: 8px;
+  border-block-start: 1px solid var(--access-ember);
+  border-inline-end: 1px solid var(--access-ember);
+  transform: rotate(45deg);
+}
+
+.access-option:is(:hover, :focus-visible) strong { color: #ffd3b6; }
+.access-option:active { transform: translateY(6px); }
+.access-option:focus-visible { outline-offset: 4px; }
+
+.commerce--convite .commerce-hero {
+  background:
+    radial-gradient(ellipse at 22% 35%, #31214388, transparent 57%),
+    radial-gradient(ellipse at 61% 108%, #532c214e, transparent 55%),
+    var(--access-void);
+}
+
+.access-pass, .access-relay {
+  min-width: 0;
+  padding: clamp(24px, 3.7vw, 58px);
+  border: 1px solid transparent;
+  clip-path: polygon(
+    var(--access-chamfer) 0, 100% 0, 100% calc(100% - var(--access-chamfer)),
+    calc(100% - var(--access-chamfer)) 100%, 0 100%, 0 var(--access-chamfer)
+  );
+  background:
+    radial-gradient(ellipse at 0 0, #57426853, transparent 68%) padding-box,
+    linear-gradient(153deg, #1b1523, #0a080e 70%, #211219) padding-box,
+    linear-gradient(132deg, #c9c3d2aa, #2d2438 44%, #835b56a2) border-box;
+}
+
+.access-pass { grid-area: 1 / 1; }
+
+.access-pass-head {
+  display: grid;
+  grid-template-columns: clamp(36px, 5vw, 65px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(13px, 2vw, 28px);
+}
+
+.access-pass-head h2, .access-relay h2 {
+  color: var(--access-titanium);
+  font-size: clamp(1.15rem, 1.9vw, 1.65rem);
+  letter-spacing: -.025em;
+  line-height: 1.17;
+  text-wrap: balance;
+}
+
+.access-pass-chip {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.35;
+  display: block;
+  overflow: hidden;
+  border: 1px solid #d2c4d494;
+  clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px);
+  background:
+    linear-gradient(90deg, transparent 45%, #28232f 47% 51%, transparent 53%),
+    repeating-linear-gradient(0deg, transparent 0 29%, #201624a0 30% 34%, transparent 35%),
+    repeating-linear-gradient(166deg, #fff1 0 1px, #251a292e 1px 2px, transparent 2px 4px),
+    linear-gradient(140deg, #d5dde7, #b8a9ba 24%, #594861 57%, #332932 78%, #bf8e74);
+  box-shadow: inset 0 1px 4px #ffece34e;
+}
+
+.access-pass-chip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-130%) skewX(-18deg);
+  background: linear-gradient(90deg, transparent 5%, #ebd0ffd0 47%, #fff0d7e8 54%, transparent 85%);
+  mix-blend-mode: screen;
+}
+
+.access-pass-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .55rem;
+  list-style: none;
+  padding: 0;
+  margin-block: 1.35rem .9rem;
+  font-weight: 710;
+  font-size: clamp(.76rem, 1.15vw, .98rem);
+}
+
+.access-pass-fields li {
+  border-block-start: 1px solid #a590bb50;
+  padding-block-start: .55em;
+  color: #e9def4;
+}
+
+.access-pass > p { color: #c9bfd4; font-size: .88rem; text-wrap: pretty; }
+
+.commerce--interesse .commerce-hero {
+  background:
+    radial-gradient(ellipse at 78% 58%, #3d235758, transparent 57%),
+    radial-gradient(ellipse at 28% 102%, #3f21194c, transparent 57%),
+    var(--access-void);
+}
+
+.commerce--interesse .commerce-hero-inner {
+  grid-template-columns: minmax(0, .96fr) minmax(0, 1.04fr);
+  justify-items: stretch;
+}
+
+.commerce--interesse .commerce-copy { text-align: start; }
+.commerce--interesse .commerce-copy :is(h1, .lead) { margin-inline: 0; }
+.commerce--interesse .commerce-copy .commerce-actions { justify-content: flex-start; }
+.access-relay { align-self: center; }
+
+.access-relay-nodes {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.access-relay-nodes::before, .access-relay-nodes::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 10px 16.67% auto;
+  height: 3px;
+  background: linear-gradient(180deg, #1f1429 0, #9d7cb5 35%, #443050 62%, #231827);
+}
+
+.access-relay-nodes::after {
+  background: linear-gradient(90deg, transparent, #b992ee, #ffe5d2, #ff9a60, transparent) -135% 50% / 43% 100% no-repeat;
+  filter: drop-shadow(0 0 5px #bb8fff);
+  opacity: 0;
+}
+
+.access-relay-nodes li {
+  display: grid;
+  justify-items: center;
+  gap: .6em;
+  font-size: clamp(.69rem, 1.18vw, .97rem);
+  color: #dfd4ec;
+}
+
+.access-relay-nodes li::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border: 1px solid #aa89b9;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+  background: linear-gradient(135deg, #553e65, #15101e 57%, #21172e);
+  box-shadow: inset 0 1px #e6d1ef66;
+}
+
+.commerce--interesse .commerce-panel { border-image: linear-gradient(90deg, #ad91cc60, #66445145, transparent) 1; }
+
+@media (max-width: 860px) {
+  .commerce--acesso .commerce-hero-inner,
+  .commerce--acesso .commerce-grid,
+  .commerce--interesse .commerce-hero-inner { grid-template-columns: minmax(0, 1fr); }
+
+  .commerce--acesso .commerce-hero-inner { min-height: 0; }
+  .access-assembly { width: min(100%, 630px); margin: 0 auto; }
+  .access-pass { grid-area: auto; }
+  .access-pass, .access-relay { width: min(100%, 640px); }
+}
+
+@media (max-width: 480px) {
+  .commerce--acesso .commerce-copy h1 { font-size: clamp(2.3rem, 10.6vw, 3.2rem); }
+  .access-assembly { margin-block-start: -5px; }
+  .access-pass, .access-relay { padding: 19px 15px; }
+}
+
+@media (prefers-reduced-motion: no-preference) and (forced-colors: none) {
+  @supports (offset-path: shape(from 0 0, line to 100% 100%)) {
+    .is-in-view .access-assembly-track::after { animation: access-assembly-current 5.3s ease-in-out infinite; }
+  }
+  .is-in-view .access-pass-chip::after { animation: access-credential-sweep 6.4s .35s ease-in-out infinite; }
+  .is-in-view .access-relay-nodes::after { animation: access-energy 5.6s .2s ease-in-out infinite; }
+
+  .filament-motion-paused :is(.access-assembly-track, .access-pass-chip, .access-relay-nodes)::after {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes access-assembly-current {
+  0%, 6% { opacity: 0; offset-distance: 0; }
+  23%, 46% { opacity: .95; }
+  68%, 100% { opacity: 0; offset-distance: 100%; }
+}
+
+@keyframes access-energy {
+  0%, 7% { opacity: 0; background-position: -135% 50%; }
+  19%, 53% { opacity: 1; }
+  68%, 100% { opacity: 0; background-position: 230% 50%; }
+}
+
+@keyframes access-credential-sweep {
+  0%, 10% { transform: translateX(-140%) skewX(-18deg); }
+  50%, 100% { transform: translateX(140%) skewX(-18deg); }
+}
+
+@media (forced-colors: active) {
+  .access-pass, .access-relay { border-color: CanvasText; clip-path: none; }
+  .access-option { border-color: CanvasText; }
+  .access-relay-nodes::before { background: CanvasText; }
+}
+

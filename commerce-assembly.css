@@ -1,0 +1,282 @@
+/* The same titanium and glass surfaces frame four different jobs. */
+.commerce-assembly {
+  --plate-silver: #d8d2e2;
+  --plate-violet: #a86ef2;
+  --plate-brasa: #ffa16a;
+  --plate-dark: #100d15;
+  --plate-bevel: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+}
+
+.commerce-assembly :is(.commerce-hero, .care-exit-head) {
+  --assembly-gap: clamp(1.6rem, 5vw, 5.75rem);
+}
+
+.commerce-assembly .commerce-hero-inner,
+.care-page--cancel.commerce-assembly .care-exit-head {
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--assembly-gap);
+  padding-block: clamp(2.5rem, 6vw, 5.75rem);
+}
+
+.commerce--pedido.commerce-assembly .commerce-hero {
+  background:
+    radial-gradient(ellipse 56% 94% at 83% 44%, #241531af, transparent),
+    radial-gradient(ellipse 54% 66% at 54% 108%, #4d251c81, transparent),
+    #08070b;
+}
+
+.commerce-assembly .commerce-copy h1 { max-width: 16ch; text-wrap: balance; }
+.commerce--pedido.commerce-assembly .commerce-copy h1 { max-width: 14ch; }
+.commerce-assembly .commerce-utility .button { min-height: 44px; }
+
+.commerce-assembly :is(.checkout-statement, .order-channel, .account-bay, .return-station) {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  justify-self: end;
+  width: min(100%, 37rem);
+  padding: 1px;
+  border: 0;
+  background:
+    linear-gradient(150deg, #f4edf4 0%, #5c5262 14%, #8b719b 36%, #26202c 62%, #9e6242 90%, #fcb88b);
+  box-shadow: 0 20px 75px #040305c9;
+  clip-path: var(--plate-bevel);
+}
+
+.commerce-assembly :is(.checkout-statement, .order-channel)::after { content: none; }
+
+.commerce-assembly .assembly-readout {
+  padding: clamp(1.1rem, 2.7vw, 2.45rem);
+  background:
+    radial-gradient(ellipse at 90% -34%, #83639537, transparent 64%),
+    linear-gradient(118deg, #19141e, var(--plate-dark) 72%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 17px), calc(100% - 17px) 100%, 0 100%);
+}
+
+.commerce-assembly .checkout-statement-entries > div { border-color: #c0acc02f; }
+.commerce-assembly .checkout-statement-entries > div:last-child { padding-block-end: 0; }
+.commerce-assembly .commerce-readout-state { margin-block: .2em .28em; text-wrap: balance; }
+.commerce--conta.commerce-assembly .commerce-readout-note { margin-block-end: 0; }
+
+.assembly-art {
+  position: relative;
+  display: block;
+  isolation: isolate;
+  height: clamp(5.35rem, 11vw, 9rem);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 80% 97%, #763f2c61, transparent 53%),
+    radial-gradient(ellipse at 67% 1%, #77519839, transparent 69%),
+    linear-gradient(170deg, #17121b, #0a080d 70%);
+  clip-path: polygon(17px 0, 100% 0, 100% 100%, 0 100%, 0 17px);
+}
+
+.assembly-art::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 1px;
+  z-index: -1;
+  background: url("assets/filamentos.webp") 80% 23% / cover no-repeat;
+  opacity: .36;
+  mask-image: linear-gradient(146deg, #0000 25%, #000 86%);
+}
+
+.assembly-art::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, #a98eae38, #e2bbecb5 49%, #a2613d7d 76%, #9a766855);
+}
+
+.assembly-art-plate {
+  position: absolute;
+  inset: 17% 10%;
+  background:
+    repeating-linear-gradient(174deg, #f1e7ef2b 0 1px, #0b071312 1px 3px, transparent 3px 5px),
+    linear-gradient(148deg, #332932 2%, #887b8b 30%, #d6cbd7 40%, #403443 65%, #a17861 92%);
+  clip-path: polygon(0 38%, 13% 0, 100% 0, 100% 61%, 88% 100%, 0 100%);
+  filter: drop-shadow(0 8px 10px #000);
+}
+
+.assembly-art-plate::before {
+  content: "";
+  position: absolute;
+  inset: 1px 1px 3px;
+  clip-path: inherit;
+  background:
+    repeating-linear-gradient(174deg, #ded1e81d 0 1px, #21182110 1px 3px, transparent 3px 5px),
+    linear-gradient(166deg, #150e1a 2%, #443946 26%, #8a7d8c 47%, #433742 50%, #19131d 78%);
+}
+
+.assembly-art-track {
+  position: absolute;
+  inset: 41% 9% auto;
+  height: 19%;
+  background: linear-gradient(180deg, #352834, #080609 28% 70%, #7a604f);
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+}
+
+.assembly-art-track::before {
+  content: "";
+  position: absolute;
+  inset: calc(50% - 1px) 4% auto;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--plate-violet) 17%, #f1ddff 50%, var(--plate-brasa) 78%, transparent);
+  box-shadow: 0 0 11px #b48af1ad;
+  opacity: .7;
+}
+
+.assembly-art-trace {
+  position: absolute;
+  left: 7%;
+  top: calc(50% - 1px);
+  width: 22%;
+  height: 2px;
+  opacity: .64;
+  border-radius: 50%;
+  background: linear-gradient(90deg, transparent, #d0a9ff 41%, #fff5e4 77%, var(--plate-brasa) 85%, transparent);
+  box-shadow: 0 0 10px #cc9bff, 0 0 4px #eabfdd;
+}
+
+.assembly-art--order .assembly-art-plate {
+  inset: 13% 7%;
+  background:
+    repeating-linear-gradient(90deg, #cec2d229 0 1px, transparent 1px 8px),
+    linear-gradient(158deg, #6b606d, #dcd1e1 22%, #50475b 30%, #291f34 72%, #936c64);
+  clip-path: polygon(0 0, 92% 0, 100% 27%, 100% 100%, 8% 100%, 0 73%);
+}
+
+.assembly-art--order .assembly-art-track {
+  inset: 35% 11% auto;
+  height: 30%;
+  clip-path: polygon(0 0, 96% 0, 100% 50%, 96% 100%, 0 100%, 4% 50%);
+}
+
+.assembly-art--order .assembly-art-track::before {
+  background:
+    repeating-linear-gradient(90deg, #d0acef 0 2px, transparent 2px 9px),
+    linear-gradient(90deg, #5f3a75, #ad7bd0 52%, #875745);
+  box-shadow: 0 0 9px #9560dbd6;
+}
+
+.assembly-art--order .assembly-art-trace {
+  --trace-travel: 545%;
+  width: 14%;
+}
+
+.assembly-art--account {
+  height: clamp(6.65rem, 13vw, 11.2rem);
+}
+
+.assembly-art--account .assembly-art-plate { inset: 16% 5%; }
+.assembly-art--account .assembly-art-track { inset-inline: 8%; }
+
+.commerce-assembly .account-bay-key {
+  position: absolute;
+  z-index: 1;
+  inset: 50% auto auto 50%;
+  width: clamp(3.65rem, 7.6vw, 6.2rem);
+  transform: translate(-50%, -50%);
+  border-color: #cab0d391;
+  background:
+    radial-gradient(circle closest-side, #201329 0 34%, #08060a 35% 42%, #392e41 43% 56%, #110e15 57% 70%, transparent 71%),
+    conic-gradient(from 60deg, #605263, #ad9faf, #3a303b 42%, #af7d62 69%, #312635 86%, #605263);
+  box-shadow: inset 0 1px #f3d7ed61, 0 5px 15px #030205bd;
+}
+
+.commerce-assembly .account-bay-key i { width: 34%; height: 5%; }
+.commerce-assembly .assembly-art--account .assembly-art-trace { left: 12%; }
+
+.care-page--cancel.commerce-assembly .care-exit-head {
+  --assembly-gap: clamp(1.5rem, 5vw, 6rem);
+}
+
+.commerce-assembly .return-station .care-dossier-index {
+  width: 100%;
+  padding: .7rem clamp(1rem, 2.3vw, 2rem) 1.1rem;
+  background: linear-gradient(145deg, #201726, var(--plate-dark) 72%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 17px), calc(100% - 17px) 100%, 0 100%);
+}
+
+.commerce-assembly .return-station .care-dossier-index a { min-height: 44px; }
+
+.assembly-art--return .assembly-art-track {
+  inset: 29% 10% auto;
+  height: 42%;
+  border: 1px solid #997e8e71;
+  clip-path: polygon(0 0, 88% 0, 100% 50%, 88% 100%, 0 100%, 4% 50%);
+  background:
+    linear-gradient(0deg, transparent 68%, #b37add 69% 72%, transparent 73%),
+    linear-gradient(0deg, transparent 26%, #ed965d 27% 31%, transparent 32%),
+    #100a12;
+}
+
+.assembly-art--return .assembly-art-track::before { content: none; }
+.assembly-art--return .assembly-art-trace { top: 66%; }
+.assembly-art--return .assembly-art-trace + .assembly-art-trace { top: 29%; }
+
+.commerce-assembly .commerce-panel {
+  background:
+    radial-gradient(ellipse at 100% 0%, #6650792c, transparent 55%),
+    linear-gradient(126deg, #201824, #100c13 68%);
+  box-shadow: inset 0 1px #f1dfff2b, 0 16px 35px #0004;
+}
+
+@media (max-width: 860px) {
+  .commerce-assembly .commerce-hero-inner,
+  .care-page--cancel.commerce-assembly .care-exit-head {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: clamp(2.2rem, 8vw, 4.2rem);
+  }
+
+  .commerce-assembly :is(.checkout-statement, .order-channel, .account-bay, .return-station) {
+    justify-self: start;
+  }
+
+  .commerce-assembly .commerce-copy h1 { text-wrap: pretty; }
+}
+
+@media (prefers-reduced-motion: no-preference) and (forced-colors: none) {
+  .commerce-assembly .is-in-view .assembly-art-trace {
+    animation: assembly-charge 6.2s cubic-bezier(.28,.1,.56,.97) infinite;
+  }
+
+  .commerce-assembly .is-in-view .assembly-art--account .assembly-art-trace {
+    animation-name: assembly-lock-charge;
+  }
+
+  .commerce-assembly .is-in-view .assembly-art--return .assembly-art-trace + .assembly-art-trace {
+    animation-name: assembly-return-charge;
+  }
+
+  .commerce-assembly.filament-motion-paused .assembly-art-trace { animation-play-state: paused; }
+
+  @keyframes assembly-charge {
+    0%, 12% { transform: translateX(-30%); opacity: .26; }
+    29%, 51% { opacity: .98; }
+    75%, 100% { transform: translateX(var(--trace-travel, 310%)); opacity: .26; }
+  }
+
+  @keyframes assembly-lock-charge {
+    0%, 12% { transform: translateX(-30%); opacity: .22; }
+    35%, 57% { opacity: 1; }
+    72%, 100% { transform: translateX(115%); opacity: .22; }
+  }
+
+  @keyframes assembly-return-charge {
+    0%, 46% { transform: translateX(310%); opacity: .24; }
+    58%, 77% { opacity: .98; }
+    91%, 100% { transform: translateX(-30%); opacity: .24; }
+  }
+}
+
+@media (forced-colors: active) {
+  .commerce-assembly :is(.checkout-statement, .order-channel, .account-bay, .return-station) {
+    border: 1px solid CanvasText;
+    clip-path: none;
+  }
+  .assembly-art { display: none; }
+}

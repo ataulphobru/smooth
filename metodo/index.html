@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Compare os critérios que o Smooth usa para avaliar a rota atual e uma alternativa.">
+  <title>Método · Smooth</title>
+  <link rel="icon" href="../assets/marca.webp" type="image/webp">
+  <link rel="stylesheet" href="../magnet.css">
+  <link rel="stylesheet" href="../ecossistema.css">
+  <link rel="stylesheet" href="../metodo.css">
+  <link rel="stylesheet" href="../filamentos.css">
+  <link rel="stylesheet" href="../proof.css">
+  <script src="../filamentos.js" defer></script>
+  <script src="../metodo-rotas.js" defer></script>
+  <script src="../ecossistema.js" defer></script>
+</head>
+<body class="magnet-ecosystem page-method" data-zone="proof">
+  <a class="skip-link" href="#principal">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="shell site-header-inner">
+      <a class="brand" href="../index.html"><img src="../assets/marca.webp" width="48" height="36" alt=""><span>SMOOTH</span></a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="../index.html">Início</a>
+        <a href="../nucleo.html">Núcleo</a>
+        <a href="../produto/index.html">Produto</a>
+        <a href="../metodo/index.html" aria-current="page">Método</a>
+        <a href="../compatibilidade/index.html">Compatibilidade</a>
+        <a href="../acesso/index.html">Acesso</a>
+      </nav>
+    </div>
+  </header>
+  <main id="principal" tabindex="-1">
+    <section class="method-hero" aria-labelledby="method-title">
+      <div class="shell method-hero-shell">
+        <div class="method-intro">
+          <p class="eyebrow">Método</p>
+          <h1 class="metal-type" id="method-title"><span class="method-title-line">A mesma partida.</span> <span class="method-title-line">Dois caminhos.</span></h1>
+          <div class="method-intro-detail">
+            <p class="lead">A rota usada pela operadora serve de referência. Uma alternativa só entra em consideração se mostrar ganho e estabilidade em condições comparáveis.</p>
+            <a class="button" href="#comparacao">Comparar as rotas <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+      </div>
+      <figure class="method-art">
+        <img data-filaments="metodo" src="../assets/metodo.webp" width="1672" height="941" fetchpriority="high" decoding="sync"
+             alt="Duas trilhas de titânio se separam e voltam ao mesmo destino. Uma tem uma fresta Brasa, a outra reflete violeta.">
+        <canvas class="method-rail-canvas" aria-hidden="true"></canvas>
+      </figure>
+    </section>
+
+    <section class="shell method-lab" id="comparacao" aria-labelledby="method-lab-title">
+      <header class="method-section-header">
+        <h2 class="metal-type" id="method-lab-title">Compare o percurso.</h2>
+        <p>Escolha uma rota para ver o que entra na avaliação. O desenho ilustra o método, sem dados de desempenho.</p>
+      </header>
+      <fieldset class="route-lab">
+        <legend class="method-hidden">Rota em destaque</legend>
+        <input class="method-hidden" type="radio" name="rota" id="rota-direta" checked>
+        <input class="method-hidden" type="radio" name="rota" id="rota-alternativa">
+        <div class="route-switch">
+          <label for="rota-direta">Rota atual</label>
+          <label for="rota-alternativa">Rota alternativa</label>
+        </div>
+        <div class="route-deck">
+          <div class="route-figure" aria-hidden="true">
+            <div class="route-orbit route-orbit--alternate"></div>
+            <div class="route-orbit route-orbit--direct"></div>
+            <span class="route-node route-node--origin"></span>
+            <span class="route-node route-node--end"></span>
+            <span class="route-caption route-caption--origin">Seu PC</span>
+            <span class="route-caption route-caption--end">Servidor</span>
+          </div>
+          <div class="route-copy">
+            <div class="route-note route-note--direct">
+              <p class="eyebrow">Referência</p>
+              <h3>Registre a rota atual.</h3>
+              <p>O caminho usado sem intervenção serve como ponto de comparação para a mesma partida, região e janela de coleta.</p>
+            </div>
+            <div class="route-note route-note--alternate">
+              <p class="eyebrow">Alternativa</p>
+              <h3>Teste outro caminho.</h3>
+              <p>Compare a alternativa sob condições equivalentes. Se o ganho for incerto ou a conexão perder estabilidade, a rota atual permanece.</p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </section>
+
+    <section class="method-criteria" aria-labelledby="criteria-title">
+      <div class="shell method-criteria-inner">
+        <h2 class="metal-type" id="criteria-title">O que sustenta a decisão.</h2>
+        <ol class="method-steps">
+          <li><h3>Fixar as condições</h3><p>Registre jogo, região, destino e janela de coleta para manter a comparação justa.</p></li>
+          <li><h3>Medir as duas rotas</h3><p>Observe latência, variação de latência e perda de pacotes em cada percurso.</p></li>
+          <li><h3>Explicar a escolha</h3><p>Registre o que mudou e se a evidência justifica manter a rota ou considerar a troca.</p></li>
+        </ol>
+        <a class="button" href="../compatibilidade/index.html">Ver compatibilidade <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="eco-section" aria-labelledby="metricas-titulo">
+      <div class="shell eco-grid proof-method-data">
+        <div class="eco-prose">
+          <h2 class="metal-type" id="metricas-titulo">O que entra na comparação</h2>
+          <p>O teste pareado registra jogo e build, região, destino, janela e fonte das medições. A análise estima o tamanho e a incerteza da diferença entre as rotas e verifica se alguma métrica piorou.</p>
+          <p>Cada resultado vale para as condições descritas no ensaio. Para avaliar conexões já estáveis, a coorte deve ser definida antes da coleta. Relatos de jogadores ficam separados das medições instrumentais.</p>
+        </div>
+        <aside class="eco-panel" aria-labelledby="leitura-titulo">
+          <h3 id="leitura-titulo">Métricas</h3>
+          <dl class="proof-spec">
+            <div><dt>RTT</dt><dd>Tempo de ida e volta. A amostra determina quais percentis podem ser publicados.</dd></div>
+            <div><dt>Jitter e perda</dt><dd>Variação do atraso e proporção de pacotes perdidos.</dd></div>
+            <div><dt>Impacto local</dt><dd>Uso de recursos pelo cliente e indicadores de estabilidade e tempo de quadro.</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+    <section class="eco-section" aria-labelledby="resultados-titulo">
+      <div class="shell proof-results">
+        <div>
+          <p class="proof-record-state">Catálogo de resultados</p>
+          <h2 class="metal-type" id="resultados-titulo">Resultados ainda não publicados.</h2>
+          <p>Ainda não há combinações homologadas para filtrar. “Teste não medido” significa ausência de coleta. “Relatório em revisão” pressupõe dados coletados que aguardam análise.</p>
+        </div>
+        <a class="button button--secondary" href="relatorios/index.html">Ver modelo de relatório</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell eco-footer-inner">
+      <a class="brand" href="../index.html"><img src="../assets/marca.webp" width="48" height="36" alt=""><span>SMOOTH</span></a>
+      <nav class="eco-footer-nav" aria-label="Links do rodapé">
+        <a href="../suporte/index.html">Suporte</a>
+        <a href="../status/index.html">Status</a>
+        <a href="../termos/index.html">Termos</a>
+        <a href="../privacidade/index.html">Privacidade</a>
+        <a href="../cancelamento/index.html">Cancelamento</a>
+      </nav>
+      <small class="eco-version">Modelo 2.0 · Magnetita</small>
+    </div>
+  </footer>
+</body>
+</html>

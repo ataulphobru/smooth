@@ -1,0 +1,41 @@
+.magnet-field {
+  position: absolute;
+  z-index: 0;
+  inset: 0 auto 0 max(0px, calc((100% - 1920px) / 2));
+  width: min(70%, 1360px);
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(90deg, #000 70%, transparent),
+    linear-gradient(180deg, transparent 27%, #0006 51%, #000 75%);
+  mask-composite: intersect;
+}
+
+@media (max-width: 785px) {
+  .magnet-field {
+    width: 100%;
+    mask-image: linear-gradient(90deg, #000 72%, transparent);
+    mask-composite: add;
+  }
+}
+
+@media (forced-colors: active) {
+  .magnet-field { display: none; }
+}
+.magnet-conduction {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(90deg, transparent 22%, #000 37%);
+}
+@media (max-width: 785px) {
+  .magnet-conduction { mask-image: linear-gradient(90deg, transparent 10%, #000 26%); }
+}
+@media (prefers-reduced-motion: reduce), (forced-colors: active) {
+  .magnet-conduction { display: none; }
+}
+
